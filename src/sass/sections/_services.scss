@@ -1,17 +1,21 @@
 .services {
-  h2 {
-    margin-bottom: rem-calc(20px);
-  }
-
   .service-description {
     background-color: $gray;
   }
 
-  .service__list-item {
-    text-transform: uppercase;
+  .service__list {
+    @include spacer(2);
+
+    .service__list-item {
+      text-transform: uppercase;
+    }
   }
 
   .service__list-messaging {
     @include spacer(3);
+  }
+
+  .service__certification-logo {
+    @include spacer(1);
   }
 }

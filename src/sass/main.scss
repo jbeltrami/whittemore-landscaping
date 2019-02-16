@@ -1,10 +1,10 @@
 @import 'variables';
 
 // Libraries
+@import './bootstrap/bootstrap';
 @import './lib/fluid-type';
 @import './lib/juice';
 @import './lib/animate-css';
-@import './lib/flickity';
 
 
 // General Files
@@ -14,6 +14,8 @@
 // sections
 @import './sections/hero';
 @import './sections/services';
+@import './sections/our-work';
+@import './sections/about';
 
 body {
   margin: 0;

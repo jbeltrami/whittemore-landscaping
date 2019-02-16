@@ -1,6 +1,6 @@
 .spacer {
-  padding-top: rem-calc(60px);
-  padding-bottom: rem-calc(60px);
+  padding-top: rem-calc(80px);
+  padding-bottom: rem-calc(80px);
 }
 
 ul,
@@ -8,4 +8,8 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+h2 {
+  margin-bottom: rem-calc(20px);
 }

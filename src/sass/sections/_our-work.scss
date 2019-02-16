@@ -1,0 +1,21 @@
+.our-work {
+  .our-work__nav-link {
+    padding: 10px 15px;
+
+    &:not(:last-of-type) {
+      span {
+        position: relative;
+
+        &:after {
+          content: '';
+          height: 100%;
+          width: 2px;
+          background-color: $gray;
+          position: absolute;
+          right: -15px;
+          top: 0;
+        }
+      }
+    }
+  }
+}
