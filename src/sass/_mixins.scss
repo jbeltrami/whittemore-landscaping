@@ -1,0 +1,4 @@
+@mixin spacer($multiplier){
+  margin-top: (10 * $multiplier) + px;
+  margin-bottom: (10 * $multiplier) + px;
+}

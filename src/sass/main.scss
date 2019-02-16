@@ -6,7 +6,15 @@
 @import './lib/animate-css';
 @import './lib/flickity';
 
-// sections
 
-@import './sections/homepage';
+// General Files
+@import 'global';
+@import 'mixins';
+
+// sections
 @import './sections/hero';
+@import './sections/services';
+
+body {
+  margin: 0;
+}
