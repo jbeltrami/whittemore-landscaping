@@ -20,13 +20,25 @@
   }
 
 .owl-carousel {
-  height: 600px;
+  height: 300px;
+  
+  @include media-breakpoint-up(sm) {
+    height: 600px;
+  }
 
   .owl-stage-outer {
-    height: 600px;
+    height: 300px;
+    
+    @include media-breakpoint-up(sm) {
+      height: 600px;
+    }
 
     .owl-stage {
-      height: 600px;
+      height: 300px;
+      
+      @include media-breakpoint-up(sm) {
+        height: 600px;
+      }
 
       .owl-item {
         height: 100%;

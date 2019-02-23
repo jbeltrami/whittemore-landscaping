@@ -1,0 +1,43 @@
+.oswald__bold_1 {
+  @include fluid-type($min-vw, $max-vw, 24px, 48px);
+  font-weight: bold;
+}
+
+.oswald__bold_2 {
+  @include fluid-type($min-vw, $max-vw, 16px, 20px);
+  font-weight: bold;
+}
+
+.oswald__bold_3 {
+  @include fluid-type($min-vw, $max-vw, 14px, 18px);
+  font-weight: bold;
+}
+
+.oswald__bold_4 {
+  @include fluid-type($min-vw, $max-vw, 10px, 12px);
+  font-weight: bold;
+}
+
+.oswald__light_1 {
+  @include fluid-type($min-vw, $max-vw, 20px, 32px);
+  font-weight: light;
+}
+
+.oswald__light_2 {
+  @include fluid-type($min-vw, $max-vw, 18px, 30px);
+  font-weight: light;
+}
+
+.oswald__light_3 {
+  @include fluid-type($min-vw, $max-vw, 16px, 20px);
+  font-weight: light;
+}
+
+h2 {
+  @extend .oswald__bold_1;
+}
+
+li,
+p {
+  @extend .oswald__light_2;
+}

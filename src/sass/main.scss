@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,700');
+
+
 @import 'variables';
 
 // Libraries
@@ -12,6 +15,7 @@
 // General Files
 @import 'global';
 @import 'mixins';
+@import 'type';
 
 // sections
 @import './sections/hero';
