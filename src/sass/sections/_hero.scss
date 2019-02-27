@@ -17,12 +17,20 @@
 
   .anniversary-logo-img {
     position: absolute;
-    bottom: 20px;
-    left: 100px;
-    width: 200px;
-    height: 200px;
     z-index: 2;
     border-radius: 50%;
-    border: 1px solid $black;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    bottom: -35px;
+
+    @include media-breakpoint-up(md) {
+      left: 100px;
+      width: 250px;
+      height: 250px;
+      bottom: -40px;
+      transform: initial;
+    }
   }
 }

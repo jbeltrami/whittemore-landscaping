@@ -17,6 +17,24 @@
         }
       }
     }
+
+    span {
+      @extend .oswald__bold_2;
+      color: $gray;
+    }
+
+    &:hover {
+      text-decoration: none;
+      span {
+        color: $lgtgray;
+      }
+    }
+
+    &.active {
+      span {
+        color: $green;
+      }
+    }
   }
 
 .owl-carousel {

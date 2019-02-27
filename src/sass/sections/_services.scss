@@ -8,14 +8,21 @@
 
     .service__list-item {
       text-transform: uppercase;
+      color: $green;
     }
   }
 
   .service__list-messaging {
     @include spacer(3);
+    @extend .oswald__bold_2;
+    color: $white;
   }
 
   .service__certification-logo {
     @include spacer(1);
+  }
+
+  .services__description {
+    color: $gray;
   }
 }
