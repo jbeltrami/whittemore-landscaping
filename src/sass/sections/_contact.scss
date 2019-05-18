@@ -1,0 +1,62 @@
+.contact {
+  margin-bottom: $spacer * 4;
+
+  .contact__container {
+    background-color: $navy;
+    color: $gray;
+    padding-top: rem-calc(15px);
+    padding-bottom: rem-calc(15px);
+
+    h2 {
+      color: $green;
+    }
+
+    img {
+      display: none;
+
+      @include media-breakpoint-up (sm) {
+        display: block;
+        object-fit: cover;
+        max-width: 100%;
+        height: 100%;
+        object-position: -100px center;
+      }
+
+      @include media-breakpoint-up (lg) {
+        width: 100%;
+        object-position: center center;
+        height: initial;
+      }
+    }
+
+    .contact__wrapper {
+      padding: 15px;
+      h3 {
+        color: #c9de7b;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .wpcf7-form-control {
+        font-size: 16px !important;
+        width: 100% !important;
+
+        &.wpcf7-textarea {
+          margin-top: 15px;
+        }
+
+        &.wpcf7-submit {
+          width: 150px !important;
+          float: right;
+          border-radius: 5px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          background-color: $green;
+          border: 0;
+          padding: 5px 10px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

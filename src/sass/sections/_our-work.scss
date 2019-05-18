@@ -1,13 +1,20 @@
 .our-work {
+  .spacer {
+    padding-bottom: 2.5rem;
+
+    @include media-breakpoint-up(md) {
+    }
+  }
   .our-work__nav-link {
-    padding: 10px 15px;
+    padding: 5px 15px;
+    cursor: pointer;
 
     &:not(:last-of-type) {
       span {
         position: relative;
 
         &:after {
-          content: '';
+          content: "";
           height: 100%;
           width: 2px;
           background-color: $gray;
@@ -18,13 +25,23 @@
       }
     }
 
+    &:last-of-type {
+      margin-bottom: 15px;
+
+      @include media-breakpoint-up (md) {
+        margin-bottom: 0;
+      }
+    }
+
     span {
+      text-transform: uppercase;
       @extend .oswald__bold_2;
       color: $gray;
     }
 
     &:hover {
       text-decoration: none;
+
       span {
         color: $lgtgray;
       }
@@ -35,45 +52,74 @@
         color: $green;
       }
     }
+
+    @include media-breakpoint-up(md) {
+      padding: 10px 15px;
+    }
   }
 
-.owl-carousel {
-  height: 300px;
-  
-  @include media-breakpoint-up(sm) {
-    height: 600px;
-  }
-
-  .owl-stage-outer {
+  .owl-carousel {
+    position: relative;
     height: 300px;
-    
     @include media-breakpoint-up(sm) {
-      height: 600px;
+      height: 70vh;
     }
 
-    .owl-stage {
+    .owl-stage-outer {
       height: 300px;
-      
       @include media-breakpoint-up(sm) {
-        height: 600px;
+        height: 70vh;
       }
 
-      .owl-item {
-        height: 100%;
-        max-height: 100%;
+      .owl-stage {
+        height: 300px;
+        @include media-breakpoint-up(sm) {
+          height: 70vh;
+        }
 
-        .item {
+        .owl-item {
           height: 100%;
-  
-          .carousel-image {
+          max-height: 100%;
+
+          .item {
             height: 100%;
-            width: auto;
+
+            .carousel-image {
+              height: 100%;
+              width: auto;
+            }
           }
         }
       }
+    }
 
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .owl-next,
+      .owl-prev {
+        width: 30px;
+        height: 30px;
+        background: $white url("../img/gallery_arrow.svg") center center/15px
+          no-repeat;
+        margin: 0;
+        border-radius: 0;
+        @include media-breakpoint-up(md) {
+          width: 50px;
+          height: 50px;
+          background: $white url("../img/gallery_arrow.svg") center center/25px
+            no-repeat;
+        }
+      }
+
+      .owl-next {
+        transform: rotate(180deg);
+      }
     }
   }
-}
-
 }

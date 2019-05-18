@@ -1,0 +1,107 @@
+.footer-wrapper {
+  background-color: $navy;
+}
+
+.footer {
+  padding-top: rem-calc(40px);
+  padding-bottom: rem-calc(22px);
+
+  .icon {
+    margin-bottom: 1rem;
+    max-width: 260px;
+  }
+
+  .message {
+    @extend .oswald__light_3;
+    color: $white;
+    margin-bottom: 1rem;
+  }
+
+  .hiring {
+    padding: 14px 32px;
+    background-color: $green;
+    @extend .oswald__light_3;
+    color: $navy;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .copyright {
+    @extend .oswald__bold_4;
+    color: $white;
+    letter-spacing: 0.5px;
+  }
+
+  .contact {
+    h4 {
+      @extend .oswald__bold_3;
+      line-height: 27px;
+      color: $green;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      a {
+        color: $green;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+        margin-top: 2rem;
+      }
+    }
+
+    li {
+      @extend .oswald__light_3;
+      color: $white;
+    }
+  }
+
+  .link {
+    @extend .oswald__bold_3;
+    color: $green;
+    display: block;
+    width: 100%;
+
+    &:not(:first-of-type) {
+      margin-top: 16px;
+    }
+  }
+
+  .social-icon-wrapper {
+    p {
+      @extend .oswald__bold_3;
+      color: $green;
+      text-transform: uppercase;
+
+      &:first-of-type {
+        margin-top: 1rem;
+
+        @include media-breakpoint-up(lg) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .social-icons {
+      @include size(38px);
+      margin-bottom: 16px;
+
+      &:not(:first-of-type) {
+        margin-left: rem-calc(16px);
+      }
+    }
+  }
+}

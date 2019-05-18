@@ -1,0 +1,20 @@
+<div class="contact"
+  id="contact">
+  <div class="container contact__container p-0">
+    <div class="row no-gutters">
+      <div class="col-lg-5 col-md-4 d-sm-none d-md-flex flex-column align-items-center">
+        <img src="{{theme.path}}/assets/img/footer-map.jpg"
+          alt="Google map image of the Company's location">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <div class="contact__wrapper">
+          <span class="green-allcaps">Contact Us</span>
+
+          {% filter shortcodes %}
+          [contact-form-7 id="143" title="Contact form 1"]
+          {% endfilter %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

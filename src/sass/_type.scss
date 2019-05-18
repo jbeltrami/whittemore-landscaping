@@ -35,10 +35,20 @@
 
 h2 {
   @extend .oswald__bold_1;
-  color: $navy;
+  color: $white;
+  text-align: center;
 }
 
 li,
 p {
   @extend .oswald__light_2;
+  color: $white;
+}
+
+.green-allcaps {
+  @include fluid-type($min-vw, $max-vw, 18px, 28px);
+  color: $green;  
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
 }

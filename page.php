@@ -23,5 +23,20 @@
 
 $context = Timber::get_context();
 $post = new TimberPost();
+
+$galleryArgs = array(
+  'posts_per_page' => -1,
+  'post_type' => 'gallery'
+);
+
+$servicesArgs = array(
+  'posts_per_page' => -1,
+  'post_type' => 'services'
+);
+
+
+
 $context['post'] = $post;
+$context['gallery'] = Timber::get_posts($galleryArgs);
+$context['services'] = Timber::get_posts($servicesArgs);
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

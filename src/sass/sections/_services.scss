@@ -1,14 +1,33 @@
 .services {
-  .service-description {
-    background-color: $gray;
+  .service__description-container {
+    background: url("../img/servicesbg-dk.jpg") bottom center/cover no-repeat;
+    padding-top: 2.5rem;
+    padding-bottom: 15px;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .service__description-spacing {
+      padding-bottom: 2.5rem;
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 0;
+      }
+    }
   }
 
   .service__list {
-    @include spacer(2);
-
     .service__list-item {
       text-transform: uppercase;
       color: $green;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include spacer(2);
     }
   }
 
@@ -19,10 +38,11 @@
   }
 
   .service__certification-logo {
-    @include spacer(1);
-  }
+    margin-bottom: 0;
+    margin-top: 10px;
 
-  .services__description {
-    color: $gray;
+    @include media-breakpoint-up(lg) {
+      @include spacer(1);
+    }
   }
 }

@@ -1,9 +1,11 @@
 {% extends "base.twig" %}
 
 {% block content %}
+  {% include 'partials/navbar.twig' %}
   {% include 'sections/hero.twig' %}
-  {% include 'sections/services.twig' %}
   {% include 'sections/our-work.twig' %}
+  {% include 'sections/services.twig' %}
   {% include 'sections/about.twig' %}
+  {% include 'sections/contact.twig' %}
   {% include 'partials/footer.twig' %}
 {% endblock %}

@@ -2,112 +2,57 @@
   id="our-work">
   <div class="container spacer">
     <div class="row">
+      <div class="col-lg-12 d-flex flex-column align-items-center mb-4">
+          <h2>SPECIALIZING IN OUTDOOR LIVING SPACES</h2>
+
+          <span class="green-allcaps">Our Work</span>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-lg-12 d-flex flex-column align-items-center">
-        <h2>OUR WORK</h2>
+        <p>Whittemores Landscape Design &amp; Construction focuses on the expert construction and installation of outdoor living areas. View our work below to see a variety of residential and commercial projects. Specific examples of work are available upon request.</p>
       </div>
     </div>
   </div>
-
 
   <nav>
     <div class="nav nav-tabs d-flex align-items-center justify-content-center"
       id="nav-tab"
       role="tablist">
-      <a class="our-work__nav-link active"
-        id="outdoor-lighting-tab"
+      {% for item in gallery %}
+      <a class="our-work__nav-link {% if loop.first %}active{% endif %} "
+        id="{{item.slug}}-tab"
         data-toggle="tab"
-        href="#outdoor-lighting"
+        data-target="#{{item.slug}}"
         role="tab"
-        aria-controls="outdoor-lighting"
+        aria-controls="{{item.slug}}"
         aria-selected="true">
-        <span>OUTDOOR LIGHTING</span>
+        <span>{{item.title}}</span>
       </a>
-      <a class="our-work__nav-link"
-        id="water-gardens-tab"
-        data-toggle="tab"
-        href="#water-gardens"
-        role="tab"
-        aria-controls="water-gardens"
-        aria-selected="false">
-        <span>WATER GARDENS</span>
-      </a>
-      <a class="our-work__nav-link"
-        id="patios-tab"
-        data-toggle="tab"
-        href="#patios"
-        role="tab"
-        aria-controls="patios"
-        aria-selected="false">
-        <span>PATIOS</span>
-      </a>
-      <a class="our-work__nav-link"
-        id="walkways-tab"
-        data-toggle="tab"
-        href="#walkways"
-        role="tab"
-        aria-controls="walkways"
-        aria-selected="false">
-        <span>WALKWAYS</span>
-      </a>
-      <a class="our-work__nav-link"
-        id="walls-tab"
-        data-toggle="tab"
-        href="#walls"
-        role="tab"
-        aria-controls="walls"
-        aria-selected="false">
-        <span>WALLS</span>
-      </a>
-      <a class="our-work__nav-link"
-        id="other-projects-tab"
-        data-toggle="tab"
-        href="#other-projects"
-        role="tab"
-        aria-controls="other-projects"
-        aria-selected="false">
-        <span>OTHER PROJECTS</span>
-      </a>
+      {% endfor %}
     </div>
   </nav>
 
   <div class="tab-content"
     id="nav-tabContent">
-    <div class="tab-pane fade show active"
-      id="outdoor-lighting"
+    {% for item in gallery %}
+    <div class="tab-pane fade show {% if loop.first %}active{% endif %}"
+      id="{{item.slug}}"
       role="tabpanel"
-      aria-labelledby="outdoor-lighting-tab">
-      {% include "partials/gallery.twig" with {'gallery': 'outdoor-lighting'} %}
-    </div>
-    <div class="tab-pane fade"
-      id="water-gardens"
-      role="tabpanel"
-      aria-labelledby="water-gardens-tab">
-      {% include "partials/gallery.twig" with {'gallery': 'water-gardens'} %}
-    </div>
-    <div class="tab-pane fade"
-      id="patios"
-      role="tabpanel"
-      aria-labelledby="patios-tab">
-      {% include "partials/gallery.twig" with {'gallery': 'patios'} %}
-    </div>
-    <div class="tab-pane fade"
-      id="walkways"
-      role="tabpanel"
-      aria-labelledby="walkways-tab">
-      {% include "partials/gallery.twig" with {'gallery': 'walkways'} %}
-    </div>
-    <div class="tab-pane fade"
-      id="walls"
-      role="tabpanel"
-      aria-labelledby="walls-tab">
-      {% include "partials/gallery.twig" with {'gallery': 'walls'} %}
-    </div>
-    <div class="tab-pane fade"
-      id="other-projects"
-      role="tabpanel"
-      aria-labelledby="other-projects-tab">
-      {% include "partials/gallery.twig" with {'gallery': 'other-projects'} %}
-    </div>
-  </div>
+      aria-labelledby="{{item.slug}}-tab">
 
+      <div class="owl-carousel owl-theme">
+        {% for img in item.meta('gallery') %}
+        <div class="item">
+          <img src="{{ Image(img.gallery_item) }}"
+            alt="{{ Image(img.gallery_item).alt }}"
+            class="carousel-image">
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
 </div>

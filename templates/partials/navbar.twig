@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-xl fixed-top">
+  <div class="container">
+    <div class="row no-gutters w-100">
+      <div class="col-lg-12">
+
+        <div class="mobile-logo">
+          <a class="nav-link logo"
+                href="#"> {% include "templates/svg/nav-logo.twig" %} <span class="sr-only">(current)</span></a>
+        </div>
+
+        <button class="navbar-toggler ml-auto d-block"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </button>
+
+        <div class="collapse navbar-collapse  no-gutters no-gutters"
+          id="navbarNavDropdown">
+          <div class="col-lg-4 d-none d-xl-block desktop-logo">
+            <div class="nav-item active">
+              <a class="nav-link logo"
+                href="#"> {% include "templates/svg/nav-logo.twig" %} <span class="sr-only">(current)</span></a>
+            </div>
+          </div>
+          <div class="col-xl-4 d-flex align-items-center justify-content-center">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="#our-work">Our Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="#about">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-xl-4 d-flex align-items-center">
+            <div class="phone mb-0 w-50">
+              <h4 class="mb-0">508.378.2237</h4>
+            </div>
+
+            <div class="cta w-50">
+              <a class="contact" href="#contact" role="button">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

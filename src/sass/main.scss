@@ -17,11 +17,16 @@
 @import 'mixins';
 @import 'type';
 
+// Partials
+@import './partials/footer';
+@import './partials/navbar';
+
 // sections
 @import './sections/hero';
 @import './sections/services';
 @import './sections/our-work';
 @import './sections/about';
+@import './sections/contact';
 
 body {
   margin: 0;
