@@ -1,6 +1,5 @@
 {% for item in services %}
-<div class="services"
-  id="services">
+<div class="services" id="services">
   <div class="container spacer">
     <div class="row">
       <div class="col-lg-12 d-flex flex-column align-items-center mb-4">
@@ -10,7 +9,11 @@
       </div>
       <div class="col-lg-12">
         <p class="mb-0 services__description">
-          Experience a new vibrant outdoor living space or enjoy the luxury of professional lawn care and landscape maintenance for your business or home. Our certified team provides unique and modern solutions for a variety of landscaping and outdoor entertainment needs, including but not limited to the following:
+          Experience a new vibrant outdoor living space or enjoy the luxury of
+          professional lawn care and landscape maintenance for your business or
+          home. Our certified team provides unique and modern solutions for a
+          variety of landscaping and outdoor entertainment needs, including but
+          not limited to the following:
         </p>
       </div>
     </div>
@@ -22,19 +25,19 @@
         <div class="col-lg-4">
           <ul class="service__list d-flex align-items-center flex-column">
             <li class="service__list-item">CREATIVE PLANTINGS</li>
-            <li class="service__list-item">FIREPLACES </li>
             <li class="service__list-item">FIRE PITS</li>
+            <li class="service__list-item">FIREPLACES</li>
             <li class="service__list-item">IRRIGATION SYSTEMS</li>
             <li class="service__list-item">LANDSCAPE LIGHTING</li>
-            <li class="service__list-item">LANDSCAPE MAINTENANCE </li>
+            <li class="service__list-item">LANDSCAPE MAINTENANCE</li>
+            <li class="service__list-item">LAWN CARE PROGRAM</li>
             <li class="service__list-item">LAWN CONSTRUCTION</li>
-            <li class="service__list-item">LAWN RENOVATION</li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul class="service__list d-flex align-items-center flex-column">
-            <li class="service__list-item">LAWN CARE PROGRAM</li>
-            <li class="service__list-item">OUTDOOR KITCHENS </li>
+            <li class="service__list-item">LAWN RENOVATION</li>
+            <li class="service__list-item">OUTDOOR KITCHENS</li>
             <li class="service__list-item">PATIOS</li>
             <li class="service__list-item">PIZZA OVENS</li>
             <li class="service__list-item">POOL DESIGN</li>
@@ -49,8 +52,8 @@
             <li class="service__list-item">TREE SPRAYING</li>
             <li class="service__list-item">WALKS</li>
             <li class="service__list-item">WALLS</li>
-            <li class="service__list-item">WATER GARDENS </li>
             <li class="service__list-item">WATER FEATURES</li>
+            <li class="service__list-item">WATER GARDENS</li>
             <li class="service__list-item">WATER PARKS</li>
             <li class="service__list-item">WATER PLAY AREAS</li>
           </ul>
@@ -58,26 +61,29 @@
       </div>
 
       <div class="row pt-lg-5">
-        <div class="col-lg-12 d-flex flex-column align-items-center justify-content-center">
-            <span class="green-allcaps">INDUSTRY CERTIFICATIONS</span>
+        <div
+          class="col-lg-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <span class="green-allcaps">INDUSTRY CERTIFICATIONS</span>
         </div>
       </div>
 
       <div class="row align-items-center justify-content-center pb-5 pt-3">
         <div class="col-lg-6 col-md-9 col-12">
           <div class="row">
-              {% for logo in item.meta('certifications') %}
-              <div class="col-3">
-                <div class="service__certification-logo">
-                  <img class="d-block w-100"
-                    src="{{ Image(logo.certification_logo) }}"
-                    alt="{{ Image(logo.certification_logo).alt }}">
-                </div>
+            {% for logo in item.meta('certifications') %}
+            <div class="col-3">
+              <div class="service__certification-logo">
+                <img
+                  class="d-block w-100"
+                  src="{{ Image(logo.certification_logo) }}"
+                  alt="{{ Image(logo.certification_logo).alt }}"
+                />
               </div>
-              {% endfor %}
+            </div>
+            {% endfor %}
           </div>
         </div>
-
       </div>
     </div>
   </div>
